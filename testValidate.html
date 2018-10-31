@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="testValidate.css">
+    <title>Form Sign Up</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Sign up</legend>
+        <form action="">
+
+        <div>
+            <label for="username">* Username:</label>
+            <input type="text" id="username" name="username" required placeholder="Just have text characters." />
+        </div>
+    
+        <div>
+            <label for="password">* Password:</label>
+            <input type="password" id="password" name="password" pattern=".{8,10}" required title="Password must be between 8 and 10 characters" />
+        </div>
+    
+        <div>
+            <label for="email">* Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Your email" />
+        </div>
+
+        <div>
+            <label for="phone">* Phone:</label>
+            <input type="number" id="phone" name="phone" required />
+        </div>
+
+        <div>
+            <label for="userBirthday">Birthday:</label>
+            <select name="monthOfBirthday">
+              <option selected disabled>Month</option>
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+            </select>
+      
+            <select name="dateOfBirthday">
+              <option selected disabled>Dates</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+      
+            <select name="yearOfBirthday">
+              <option value="" selected disabled>Years</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+            </select>
+        </div>
+      
+        <div>
+            <label for="userAndTerms">I agree to the terms and conditions: </label>
+            <input id="userAndTerms" type="checkbox" name="userAgree">
+        </div>
+
+        <input type="submit" value="Sign in" onclick="validate()">
+    
+        </form>
+    </fieldset>
+    <script src="testValidate.js"></script>
+</body>
+</html>
